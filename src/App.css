@@ -95,3 +95,12 @@
   background-color: aliceblue;
   border-radius: 5px;
 }
+.herotwo{
+  background-color: #E9F8FD;
+  padding: 7vw;
+}
+.aboutcont{
+  display: flex;
+  gap: 8vw;
+  align-items: center;
+}

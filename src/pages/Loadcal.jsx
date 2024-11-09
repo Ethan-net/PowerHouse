@@ -31,8 +31,16 @@ export default function Loadcal() {
     const TotalRef350 = ref350 * 320
     const [ref450, SetRef450] = React.useState(0)
     const TotalRef450 = ref450 * 460
+    const [toaster, SetToaster] = React.useState(0)
+    const TotalToaster = toaster * 800
+    const [washingMach, SetWashingMach] = React.useState(0)
+    const TotalWashingMach = washingMach * 1000
+    const [gamingCons, SetGamingCons] = React.useState(0)
+    const TotalGamingcons = gamingCons * 200
+    const [microwave, SetMicrowave] = React.useState(0)
+    const TotalMicrowave = microwave * 1400
 
-    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan + TotalMusicSystem + TotalsmallTv + TotalBiglTv + TotalDcomp + TotalLaptop +TotalRef165 + TotalRef250 + TotalRef350 + TotalRef450;
+    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan + TotalMusicSystem + TotalsmallTv + TotalBiglTv + TotalDcomp + TotalLaptop +TotalRef165 + TotalRef250 + TotalRef350 + TotalRef450 + TotalToaster + TotalWashingMach + TotalGamingcons + TotalMicrowave;
     
     let InverterRating;
 
@@ -265,41 +273,41 @@ export default function Loadcal() {
             <div className='flexable'>
                 <h2>Toaster</h2>
                 <h2>1 unit(800 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{toaster}</h2>
+                <h2>{TotalToaster}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=> SetToaster(toaster - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=> SetToaster(toaster + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Washing Machine</h2>
                 <h2>1 unit(1000 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{washingMach}</h2>
+                <h2>{TotalWashingMach}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetWashingMach(washingMach - 1)} className='bg-black text-white rounded-lg '>-</button>  
+                <button onClick={() => SetWashingMach(washingMach + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Gaming Console</h2>
-                <h2>1 unit(250 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>1 unit(200 watt)</h2>
+                <h2>{gamingCons}</h2>
+                <h2>{TotalGamingcons}</h2>
                 <div className='flex gap-5 thebut '>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetGamingCons (gamingCons - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={() => SetGamingCons (gamingCons + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Microwave</h2>
-                <h2>1 unit(60 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>1 unit(1400 watt)</h2>
+                <h2>{microwave}</h2>
+                <h2>{TotalMicrowave}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg' >-</button> 
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=> SetMicrowave(microwave - 1)} className='bg-black text-white rounded-lg' >-</button> 
+                <button onClick={()=> SetMicrowave(microwave + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             
