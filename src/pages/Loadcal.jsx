@@ -16,7 +16,23 @@ export default function Loadcal() {
     const TotalMusicSystem = musicSystem * 320;
     const [tvSmall, SetTvSmall] = React.useState(0);
     const TotalsmallTv = tvSmall * 150;
-    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan + TotalMusicSystem + TotalsmallTv;
+    const [tvBig, SetTvBig] = React.useState(0);
+    const TotalBiglTv = tvBig * 200;
+    const [Dcomp, SetDcomp] = React.useState(0);
+    const TotalDcomp = Dcomp * 200;
+    const [laptop, SetLaptop] = React.useState(0);
+    const TotalLaptop = laptop * 100;
+
+    const [ref165, SetRef165] = React.useState(0)
+    const TotalRef165 = ref165 * 150
+    const [ref250, SetRef250] = React.useState(0)
+    const TotalRef250 = ref250 * 210
+    const [ref350, SetRef350] = React.useState(0)
+    const TotalRef350 = ref350 * 320
+    const [ref450, SetRef450] = React.useState(0)
+    const TotalRef450 = ref450 * 460
+
+    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan + TotalMusicSystem + TotalsmallTv + TotalBiglTv + TotalDcomp + TotalLaptop +TotalRef165 + TotalRef250 + TotalRef350 + TotalRef450;
     
     let InverterRating;
 
@@ -179,81 +195,71 @@ export default function Loadcal() {
             <div className='flexable'>
                 <h2>Tv {">"} 42"</h2>
                 <h2>1 unit(200 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{tvBig}</h2>
+                <h2>{TotalBiglTv}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetTvBig(tvBig - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={() => SetTvBig(tvBig + 1) } className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Desktop Computer</h2>
                 <h2>1 unit(200 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{Dcomp}</h2>
+                <h2>{TotalDcomp}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=>SetDcomp(Dcomp - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=>SetDcomp(Dcomp + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
-            </div>        
-            <div className='flexable'>
-                <h2>Normal Bulb</h2>
-                <h2>1 unit(60 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
-                <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
-                </div>
-            </div>        
+            </div>             
             <div className='flexable'>
                 <h2>Laptop</h2>
                 <h2>1 unit(100 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{laptop}</h2>
+                <h2>{TotalLaptop}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetLaptop(laptop -1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={() => SetLaptop(laptop + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Ref(165ltr - 250ltr)</h2>
                 <h2>1 unit(150 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{ref165}</h2>
+                <h2>{TotalRef165}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetRef165(ref165 - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={() => SetRef165(ref165 + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Ref(250ltr - 350ltr)</h2>
                 <h2>1 unit(210 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{ref250}</h2>
+                <h2>{TotalRef250}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=> SetRef250(ref250 - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=> SetRef250(ref250 + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Ref(350ltr - 450ltr)</h2>
                 <h2>1 unit(320 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{ref350}</h2>
+                <h2>{TotalRef350}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=> SetRef350 (ref350 - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=> SetRef350 (ref350 + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Ref({">"}) 450ltr</h2>
                 <h2>1 unit(460 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{ref450}</h2>
+                <h2>{TotalRef450}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={()=> SetRef450(ref450 - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=> SetRef450(ref450 + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
