@@ -14,7 +14,7 @@ export default function HeroTwo() {
         <img src={image1} alt="" />
         <div>
             <h1>About Powerhouse, the Best Solar Company in Nigeria.</h1>
-            <p>Powerhouse, a beacon of sustainable energy solutions, stands as the <br/>premier solar company in Nigeria, exemplifying excellence in harnessing<br/> the power of the sun to drive a brighter, cleaner future. With a steadfast<br/> commitment to innovation, reliability, and environmental responsibility<br/>, Powerhouse has emerged as the go-to provider for solar energy solutions in<br/> the region.</p>
+            <p>Powerhouse, a beacon of sustainable energy solutions, stands as the <br/>premier solar company in Nigeria, exemplifying excellence in harnessing<br/> the power of the sun to drive a brighter, cleaner future. With a steadfast<br/> commitment to innovation, reliability, and environmental responsibility,<br/>Powerhouse has emerged as the go-to provider for solar energy solutions in<br/> the region.</p>
         </div>
      </div>
     <div className='aboutcont'>
