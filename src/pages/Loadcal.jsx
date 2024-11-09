@@ -12,7 +12,11 @@ export default function Loadcal() {
     const TotalLbulb = lbulb * 15;
     const [fan, SetFan] = React.useState(0);
     const TotalFan = fan * 70;
-    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan;
+    const [musicSystem, SetMusicSystem] = React.useState(0);
+    const TotalMusicSystem = musicSystem * 320;
+    const [tvSmall, SetTvSmall] = React.useState(0);
+    const TotalsmallTv = tvSmall * 150;
+    const TotalLoad = TotalNbulb + TotalLbulb + TotalTbulb + TotalFan + TotalMusicSystem + TotalsmallTv;
     
     let InverterRating;
 
@@ -155,21 +159,21 @@ export default function Loadcal() {
             <div className='flexable'>
                 <h2>Music System</h2>
                 <h2>1 unit(320 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{musicSystem}</h2>
+                <h2>{TotalMusicSystem}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetMusicSystem(musicSystem - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={()=> SetMusicSystem(musicSystem + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
                 <h2>Tv {"<"} 42" </h2>
                 <h2>1 unit(150 watt)</h2>
-                <h2>0</h2>
-                <h2>0</h2>
+                <h2>{tvSmall}</h2>
+                <h2>{TotalsmallTv}</h2>
                 <div className='flex gap-5 thebut'>
-                <button className='bg-black text-white rounded-lg ' >-</button>  
-                <button className='bg-red-500 text-white rounded-lg'>+</button>
+                <button onClick={() => SetTvSmall(tvSmall - 1)} className='bg-black text-white rounded-lg ' >-</button>  
+                <button onClick={() => SetTvSmall(tvSmall + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
             </div>        
             <div className='flexable'>
@@ -298,7 +302,7 @@ export default function Loadcal() {
         <div className='loadResult'>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Total Load</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto'>{TotalLoad}</p>
+                <p className='text-white bg-black w-20 my-0 mx-auto'>{TotalLoad} watt</p>
             </div>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Recommended Inverter rating</h1>
