@@ -23,7 +23,9 @@ export default function Nav() {
         </Link>
         <button className='hover:bg-red-600 hover:text-white p-2 rounded-lg text-xs hover:duration-1000 hover:transition' >Blog</button>
         </div>
+        <button className='bg-red-500 text-white p-3 rounded-xl text-sm'>Contact us</button>
      </div>
+
     </div>
   )
 }

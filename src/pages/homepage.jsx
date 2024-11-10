@@ -16,9 +16,6 @@ export default function Homepage() {
       <Section/>
 
     </div>
-    <section>
-        
-    </section>
     </>
   )
 }
