@@ -1,9 +1,34 @@
-import React from 'react'
+import React, {useRef}  from 'react'
+import jsPDF from "jspdf"
+import html2canvas from "html2canvas"
 import Nav from '../components/Nav'
 import '../App.css'
-import RequestQouteButton from '../components/RequestQouteButton';
+import downloadBut from '../assets/images/Download.svg'
 
 export default function Loadcal() {
+
+    
+
+    
+        const sectionRef = useRef();
+
+        const handleDownloadPdf = async () => {
+            const section = sectionRef.current;
+
+            const canvas = await html2canvas (section, {scale: 2});
+            const imgData = canvas.toDataURL("image/png");
+
+            const pdf = new jsPDF();
+            const imgWidth = pdf.internal.pageSize.getWidth();
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+            pdf.save("download.pdf");
+
+        }
+
+
+
     const [nbulb, SetNbulb] = React.useState(0);
     const TotalNbulb = nbulb * 60;
     const [tbulb, SetTbulb] = React.useState(0);
@@ -315,25 +340,27 @@ export default function Loadcal() {
         </div>
 
         <div className='loadResult'>
+
+        <div className='downloadSec'  ref={sectionRef}>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Total Load</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto'>{TotalLoad} watt</p>
+                <p className='text-white  bg-black h-7 w-20 my-0 mx-auto'>{TotalLoad} watt</p>
             </div>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Recommended Inverter rating</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto'>{InverterRating}</p>
+                <p className='text-white bg-black h-7 w-20 my-0 mx-auto'>{InverterRating}</p>
             </div>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'> Required Solar Pannel Capacity</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto' >{solaPannelcap}</p>
+                <p className='text-white bg-black h-7 w-20 my-0 mx-auto' >{solaPannelcap}</p>
             </div>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Qauntity of Solar Pannel (300 watt Each)</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto'>{SolarPannelQ}</p>
+                <p className='text-white bg-black h-7 w-20 my-0 mx-auto'>{SolarPannelQ}</p>
             </div>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Charge Controller</h1>
-                <p className='text-white bg-black w-20 my-0 mx-auto'>{chargeCont}</p>
+                <p className='text-white bg-black h-7 w-20 my-0 mx-auto'>{chargeCont}</p>
             </div>
             <div className='text-center'>
                 <h1 className='text-sm font-bold mb-5'>Battery</h1>
@@ -348,7 +375,10 @@ export default function Loadcal() {
                     </div>
                 </div>
             </div>
-            <RequestQouteButton/>
+            </div>
+                    <div className='downloadButt' >
+                    <button onClick={handleDownloadPdf} className=' bg-red-500 p-2 rounded-xl '>Download Load Result <img className='w-5 mx-auto ' src={downloadBut} alt="" /> </button>
+                    </div>
         </div>
 
       </div>

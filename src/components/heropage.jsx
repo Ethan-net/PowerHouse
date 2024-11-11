@@ -9,7 +9,7 @@ export default function Heropage() {
         <div className='-rotate-90 m-5'>
         <h1 className=' usecase text-6xl text-white'>Solar System Market</h1>
         <p>Practical renewable energy technology <br/>that reduces costs and helps the environment</p>
-        <button className='quoteBut bg-black text-white p-5 rounded-2xl my-5 text-xs hover:duration-700 hover:transition'>Request a Quote</button>
+        <button className='quoteBut bg-black text-white p-5 rounded-2xl my-5 text-xs hover:duration-700 hover:transition'>Get Started</button>
         </div>
       </div>
       <img src= '' alt="" />

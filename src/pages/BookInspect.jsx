@@ -18,7 +18,7 @@ export default function BookInspect() {
         <div className="col-span-full">
           <label for="about" className="block text-sm/6 font-medium text-gray-900">Describe Your House, Estate and its properties</label>
           <div className="mt-2">
-            <textarea id="about" name="about" rows="3" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"></textarea>
+            <textarea id="about" name="about" rows="3" className="block w-full rounded-md border-0 px-5 outline-none py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"></textarea>
           </div>
           <p className="mt-3 text-sm/6 text-gray-600">Describe the type of property</p>
         </div>
@@ -52,28 +52,28 @@ export default function BookInspect() {
         <div className="sm:col-span-3">
           <label for="first-name" className="block text-sm/6 font-medium text-gray-900">First name</label>
           <div className="mt-2">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm/6"/>
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 outline-none px-5  sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-3">
           <label for="last-name" className="block text-sm/6 font-medium text-gray-900">Last name</label>
           <div className="mt-2">
-            <input type="text" name="last-name" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"/>
+            <input type="text" name="last-name" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-4">
           <label for="email" className="block text-sm/6 font-medium text-gray-900">Email address</label>
           <div className="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"/>
+            <input id="email" name="email" type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5  px-5 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-3">
           <label for="country" className="block text-sm/6 font-medium text-gray-900">Country</label>
           <div className="mt-2">
-            <select id="country" name="country" autocomplete="country-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:max-w-xs sm:text-sm/6">
+            <select id="country" name="country" autocomplete="country-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 px-5 outline-none sm:max-w-xs sm:text-sm/6">
               <option>Nigeria</option>
               <option>United States</option>
               <option>Canada</option>
@@ -93,28 +93,28 @@ export default function BookInspect() {
         <div className="col-span-full">
           <label for="street-address" className="block text-sm/6 font-medium text-gray-900">Street address</label>
           <div className="mt-2">
-            <input type="text" name="street-address" id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"/>
+            <input type="text" name="street-address" id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  outline-none px-5 sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-2 sm:col-start-1">
           <label for="city" className="block text-sm/6 font-medium text-gray-900">City</label>
           <div className="mt-2">
-            <input type="text" name="city" id="city" autocomplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"/>
+            <input type="text" name="city" id="city" autocomplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-2">
           <label for="region" className="block text-sm/6 font-medium text-gray-900">State / Province</label>
           <div className="mt-2">
-            <input type="text" name="region" id="region" autocomplete="address-level1" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"/>
+            <input type="text" name="region" id="region" autocomplete="address-level1" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-2">
           <label for="postal-code" className="block text-sm/6 font-medium text-gray-900">ZIP / Postal code</label>
           <div className="mt-2">
-            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"/>
+            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none  sm:text-sm/6"/>
           </div>
         </div>
       </div>
