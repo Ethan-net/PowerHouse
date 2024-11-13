@@ -178,65 +178,65 @@ const solarProducts = [
         type: "Solar Panel",
         name: "Monocrystalline Solar Panel",
         model: "Mono 200W",
-        price: "$100",
+        price: "N170,000",
         capacity: "200W, 12V",
-        image: "https://example.com/images/mono-200w.jpg"
+        image: "https://i.ebayimg.com/images/g/pDYAAOSw2HVnDW-g/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "Polycrystalline Solar Panel",
         model: "Poly 250W",
-        price: "$110",
+        price: "N189,000",
         capacity: "250W, 24V",
-        image: "https://example.com/images/poly-250w.jpg"
+        image: "https://i.ebayimg.com/images/g/KpUAAOSwED5mvHxW/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "Flexible Solar Panel",
         model: "Flex 100W",
-        price: "$90",
+        price: "N145,000",
         capacity: "100W, 12V",
-        image: "https://example.com/images/flex-100w.jpg"
+        image: "https://i.ebayimg.com/images/g/2u8AAOSwt2xmOQPl/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "Bifacial Solar Panel",
         model: "Bifa 400W",
-        price: "$180",
+        price: "N185,000",
         capacity: "400W, 24V",
-        image: "https://example.com/images/bifa-400w.jpg"
+        image: "https://fouanistore.com/storage/data/products/1150.png?v=0"
     },
     {
         type: "Solar Panel",
         name: "Portable Solar Panel",
         model: "Port 120W",
-        price: "$150",
+        price: "N245,000",
         capacity: "120W, 12V",
-        image: "https://example.com/images/port-120w.jpg"
+        image: "https://i.ebayimg.com/images/g/ZmsAAOSwWNhjhQnU/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "High-Efficiency Solar Panel",
         model: "HE Mono 370W",
-        price: "$200",
+        price: "N310,000",
         capacity: "370W, 24V",
-        image: "https://example.com/images/he-370w.jpg"
+        image: "https://i.ebayimg.com/images/g/c8EAAOSwImZmn31T/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "PERC Solar Panel",
         model: "PERC 450W",
-        price: "$230",
+        price: "N230,000",
         capacity: "450W, 24V",
-        image: "https://example.com/images/perc-450w.jpg"
+        image: "https://i.ebayimg.com/images/g/iBQAAOSw54lm60Xj/s-l1600.webp"
     },
     {
         type: "Solar Panel",
         name: "Thin-Film Solar Panel",
         model: "Thin 150W",
-        price: "$90",
+        price: "N90,000",
         capacity: "150W, 12V",
-        image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/1533272/1.jpg?0526"
+        image: "https://i.ebayimg.com/images/g/kTIAAOSw3x9h0yIL/s-l1600.webp"
     }
 ];
 

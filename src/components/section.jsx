@@ -2,10 +2,19 @@ import React from 'react'
 import '../App.css'
 import CountUp from 'react-countup';
 
+
 export default function Section() {
   return (
     <div className='sectionUp'>
-        <div className='sector'>
+        <video
+      src='https://videos.pexels.com/video-files/15046674/15046674-sd_960_506_24fps.mp4'
+      className='w-full  object-cover h-[30vh] absolute'
+      autoPlay
+      loop
+      muted
+      playsInline
+      ></video>
+        <div className='sector relative top-20'>
         <h1 className='font-bold text-2xl text-white text-center' >"Powerhouse: Illuminating Excellence, Delivering High-Quality
         Projects with Precision and Commitment."</h1>
         <div className='sectionCont'>

@@ -2,13 +2,68 @@ import React from 'react'
 import Nav from '../components/Nav'
 import '../App.css'
 
+import axios from "axios"
+import { useState } from 'react'
+
 export default function BookInspect() {
+
+   const [userInfo, SetUserInfo] = useState({
+    description: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    state: "",
+    address:"",
+    zipNo: ""
+
+   });
+
+   const handleChange = (e) => {
+    const { name, value } = e.target;
+    SetUserInfo((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+
+    
+    
+
+    async function  handleSubmit(e){
+      e.preventDefault()
+
+      try{
+        const response = await axios.post("https://powerhouse-backend.onrender.com/api/inspections/bookinspection", userInfo,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        alert("Your Details was submitted Successfully");
+        console.log(response.data)
+
+        
+      }
+      catch(error) {
+        console.error(
+          "Error Submtting data:",
+          error.response?.data || error.message
+        );
+        alert("Failed to Submit Data");
+      }
+
+    }
+
   return (
     <div>
         <Nav/>
-        <form className='mt-32'>
-  <div className="space-y-12 bookInpect">
-    <div className="border-b border-gray-900/10 pb-12">
+        <form onSubmit={handleSubmit} className='mt-32'>
+      <div className="space-y-12 bookInpect">
+      <div className="border-b border-gray-900/10 pb-12">
       <h2 className="text-base/7 font-semibold text-gray-900">Site Inspection Form</h2>
       <p className="mt-1 text-sm/6 text-gray-600">This information will be used strictly by Powerhouse for inspections  and further Site work and will be safely stored in our customer database</p>
 
@@ -18,7 +73,7 @@ export default function BookInspect() {
         <div className="col-span-full">
           <label for="about" className="block text-sm/6 font-medium text-gray-900">Describe Your House, Estate and its properties</label>
           <div className="mt-2">
-            <textarea id="about" name="about" rows="3" className="block w-full rounded-md border-0 px-5 outline-none py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"></textarea>
+            <textarea onChange={handleChange} value={userInfo.description} id="about" name="description" rows="3" className="block w-full rounded-md border-0 px-5 outline-none py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6"></textarea>
           </div>
           <p className="mt-3 text-sm/6 text-gray-600">Describe the type of property</p>
         </div>
@@ -52,28 +107,29 @@ export default function BookInspect() {
         <div className="sm:col-span-3">
           <label for="first-name" className="block text-sm/6 font-medium text-gray-900">First name</label>
           <div className="mt-2">
-            <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 outline-none px-5  sm:text-sm/6"/>
+            <input type="text" name='firstName' onChange={handleChange } value={userInfo.firstName} id="first-name" autocomplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 outline-none px-5  sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-3">
           <label for="last-name" className="block text-sm/6 font-medium text-gray-900">Last name</label>
           <div className="mt-2">
-            <input type="text" name="last-name" id="last-name" autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
+            <input type="text" name='lastName' onChange={handleChange } value={userInfo.lastName} autocomplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-4">
           <label for="email" className="block text-sm/6 font-medium text-gray-900">Email address</label>
           <div className="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5  px-5 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm/6"/>
+            <input id="email" name='email' onChange={handleChange } value={userInfo.email} type="email" autocomplete="email" className="block w-full rounded-md border-0 py-1.5  px-5 outline-none text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-3">
           <label for="country" className="block text-sm/6 font-medium text-gray-900">Country</label>
           <div className="mt-2">
-            <select id="country" name="country" autocomplete="country-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 px-5 outline-none sm:max-w-xs sm:text-sm/6">
+            <select onChange={handleChange } id="country" value={userInfo.country} name="country" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 px-5 outline-none sm:max-w-xs sm:text-sm/6">
+              <option>----</option>
               <option>Nigeria</option>
               <option>United States</option>
               <option>Canada</option>
@@ -93,28 +149,27 @@ export default function BookInspect() {
         <div className="col-span-full">
           <label for="street-address" className="block text-sm/6 font-medium text-gray-900">Street address</label>
           <div className="mt-2">
-            <input type="text" name="street-address" id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  outline-none px-5 sm:text-sm/6"/>
+            <input type="text" name='address' onChange={handleChange } value={userInfo.address} id="street-address" autocomplete="street-address" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  outline-none px-5 sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-2 sm:col-start-1">
-          <label for="city" className="block text-sm/6 font-medium text-gray-900">City</label>
+          <label className="block text-sm/6 font-medium text-gray-900">State</label>
           <div className="mt-2">
-            <input type="text" name="city" id="city" autocomplete="address-level2" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
-          </div>
-        </div>
-
-        <div className="sm:col-span-2">
-          <label for="region" className="block text-sm/6 font-medium text-gray-900">State / Province</label>
-          <div className="mt-2">
-            <input type="text" name="region" id="region" autocomplete="address-level1" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
+            <input 
+            type="text" 
+            name='state' 
+            onChange={handleChange } 
+            value={userInfo.state} 
+            id="city" 
+            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none sm:text-sm/6"/>
           </div>
         </div>
 
         <div className="sm:col-span-2">
           <label for="postal-code" className="block text-sm/6 font-medium text-gray-900">ZIP / Postal code</label>
           <div className="mt-2">
-            <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none  sm:text-sm/6"/>
+            <input type = "number" name= "zipNo" onChange={handleChange} value={userInfo.zipNo}   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none  sm:text-sm/6"/>
           </div>
         </div>
       </div>

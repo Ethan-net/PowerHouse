@@ -108,12 +108,11 @@ body{
   align-items: center;
 }
 .sectionUp{
-  background: url('./assets/images/Sectionbg.svg');
   height: 50vh;
   background-size: cover;
   width: 100%;
   align-items: center;
-  padding-top: 20vh
+  /* padding-top: 20vh */
 }
 
 .sectionCont{
@@ -138,4 +137,7 @@ body{
 }
 .downloadSec{
   margin: 3vw;
+}
+.productImg{ 
+  width: 20vw;
 }
