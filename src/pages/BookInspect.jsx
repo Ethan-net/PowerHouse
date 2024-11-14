@@ -15,6 +15,7 @@ export default function BookInspect() {
     country: "",
     state: "",
     address:"",
+    progress:"",
     zipNo: ""
 
    });
@@ -170,6 +171,12 @@ export default function BookInspect() {
           <label for="postal-code" className="block text-sm/6 font-medium text-gray-900">ZIP / Postal code</label>
           <div className="mt-2">
             <input type = "number" name= "zipNo" onChange={handleChange} value={userInfo.zipNo}   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none  sm:text-sm/6"/>
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label  className="block text-sm/6 font-medium text-gray-900">Readiness(In percentage)</label>
+          <div className="mt-2">
+            <input type = "number" name= "progress" onChange={handleChange} placeholder='Describe how Ready you are' value={userInfo.progress}   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 px-5 outline-none  sm:text-sm/6"/>
           </div>
         </div>
       </div>
