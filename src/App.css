@@ -166,8 +166,9 @@ body{
   .process{
     margin-top: 15vh;
   }
-  .nav{
-    display:flex;
-    flex-direction: column;
+  .nav_pro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

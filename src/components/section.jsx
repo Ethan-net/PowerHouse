@@ -8,13 +8,13 @@ export default function Section() {
     <div className='sectionUp'>
         <video
       src='https://videos.pexels.com/video-files/15046674/15046674-sd_960_506_24fps.mp4'
-      className='w-full  object-cover h-[30vh] absolute'
+      className='w-full  object-cover absolute h-[50vh]'
       autoPlay
       loop
       muted
       playsInline
       ></video>
-        <div className='sector relative top-20'>
+        <div className='sector relative top-28'>
         <h1 className='font-bold text-2xl text-white text-center' >"Powerhouse: Illuminating Excellence, Delivering High-Quality
         Projects with Precision and Commitment."</h1>
         <div className='sectionCont'>
@@ -32,6 +32,7 @@ export default function Section() {
             </div>
         </div>
         </div>
+        
       
     </div>
   )
