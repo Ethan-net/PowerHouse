@@ -11,7 +11,7 @@ export default function Nav() {
         <Logo/>
         </Link>
 
-      <div className='flex gap-6 items-center '>
+      <div className='flex gap-6 items-center nav-but '>
         <Link to="/loadcal">
         <button className='hover:bg-red-600 hover:text-white p-2 rounded-lg text-xs hover:duration-1000 hover:transition'>Load Calculator</button>
         </Link>

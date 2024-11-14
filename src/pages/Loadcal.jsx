@@ -157,7 +157,7 @@ export default function Loadcal() {
 
     <div>
       <Nav/>
-      <div className='loadcal flex justify-between'>
+      <div className='loadcal flex flex-wrap '>
         <div >
             <div className='flexable '>
                 <h1 className='font-bold text-lg'>APPLIANCE</h1>

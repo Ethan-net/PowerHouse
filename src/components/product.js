@@ -1,13 +1,6 @@
 const solarProducts = [
     // Batteries
-    {
-        type: "Battery",
-        name: "Lithium-Ion Battery",
-        model: "LiFePO4 100Ah",
-        price: "N270,000",
-        capacity: "100Ah, 12V",
-        image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/1533272/1.jpg?0526"
-    },
+    
     {
         type: "Battery",
         name: "Lithium-Ion Battery",
@@ -15,6 +8,14 @@ const solarProducts = [
         price: "N450,000",
         capacity: "200Ah, 12V",
         image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/53/812857/1.jpg?6689"
+    },
+    {
+        type: "Inverter",
+        name: "Pure Sine Wave Inverter",
+        model: "Renogy 1000W",
+        price: "N288,000",
+        capacity: "1000W, 12V",
+        image: "https://i.ebayimg.com/images/g/SkUAAOSwe4dmmWx-/s-l1600.webp"
     },
     {
         type: "Battery",
@@ -33,6 +34,14 @@ const solarProducts = [
         image: "https://www.sumecplaza.com/cdn/shop/files/Untitleddesign_26_19411dd4-38d6-421a-a82e-fa51312e920b_1080x.png?v=1691233439"
     },
     {
+        type: "Solar Panel",
+        name: "PERC Solar Panel",
+        model: "PERC 450W",
+        price: "N230,000",
+        capacity: "450W, 24V",
+        image: "https://i.ebayimg.com/images/g/iBQAAOSw54lm60Xj/s-l1600.webp"
+    },
+    {
         type: "Battery",
         name: "Sealed Lead Acid Battery",
         model: "SLA 100Ah",
@@ -40,14 +49,7 @@ const solarProducts = [
         capacity: "100Ah, 12V",
         image: "https://cloudsecurity.com.ng/wp-content/uploads/2019/03/12vdc-7ah-battery.jpg"
     },
-    {
-        type: "Battery",
-        name: "AGM Solar Battery",
-        model: "AGM 250Ah",
-        price: "N678,000",
-        capacity: "250Ah, 12V",
-        image: "https://www.europe-solarstore.com/media/catalog/product/cache/1/image/363x/040ec09b1e35df139433887a97daa66f/a/g/agm_deep_cycle_battery_12v_90ah.jpg"
-    },
+    
     {
         type: "Battery",
         name: "Tubular Battery",
@@ -81,6 +83,14 @@ const solarProducts = [
         price: "N58,000",
         capacity: "60A, 12/24/48V",
         image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/29/4296852/1.jpg?8187"
+    },
+    {
+        type: "Battery",
+        name: "AGM Solar Battery",
+        model: "AGM 250Ah",
+        price: "N678,000",
+        capacity: "250Ah, 12V",
+        image: "https://www.europe-solarstore.com/media/catalog/product/cache/1/image/363x/040ec09b1e35df139433887a97daa66f/a/g/agm_deep_cycle_battery_12v_90ah.jpg"
     },
     {
         type: "Charge Controller",
@@ -141,6 +151,14 @@ const solarProducts = [
         image: "https://i.ebayimg.com/images/g/ptoAAOSweKtmgdIr/s-l1600.webp"
     },
     {
+        type: "Battery",
+        name: "Lithium-Ion Battery",
+        model: "LiFePO4 100Ah",
+        price: "N270,000",
+        capacity: "100Ah, 12V",
+        image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/44/1533272/1.jpg?0526"
+    },
+    {
         type: "Inverter",
         name: "Grid-Tie Inverter",
         model: "Enphase IQ7",
@@ -148,14 +166,7 @@ const solarProducts = [
         capacity: "250W, 120V",
         image: "https://i.ebayimg.com/images/g/PGEAAOSw99FnGBYx/s-l1600.webp"
     },
-    {
-        type: "Inverter",
-        name: "Pure Sine Wave Inverter",
-        model: "Renogy 1000W",
-        price: "N288,000",
-        capacity: "1000W, 12V",
-        image: "https://i.ebayimg.com/images/g/SkUAAOSwe4dmmWx-/s-l1600.webp"
-    },
+    
     {
         type: "Inverter",
         name: "Off-Grid Inverter",
@@ -222,14 +233,7 @@ const solarProducts = [
         capacity: "370W, 24V",
         image: "https://i.ebayimg.com/images/g/c8EAAOSwImZmn31T/s-l1600.webp"
     },
-    {
-        type: "Solar Panel",
-        name: "PERC Solar Panel",
-        model: "PERC 450W",
-        price: "N230,000",
-        capacity: "450W, 24V",
-        image: "https://i.ebayimg.com/images/g/iBQAAOSw54lm60Xj/s-l1600.webp"
-    },
+    
     {
         type: "Solar Panel",
         name: "Thin-Film Solar Panel",

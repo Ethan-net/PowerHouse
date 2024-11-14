@@ -132,12 +132,42 @@ body{
   margin: 0 auto;
 }
 .downloadButt{
-  width: 50vw;
-  margin: 3vh 40%;
+  width:50%;
+  margin: 3vh auto;
 }
 .downloadSec{
   margin: 3vw;
 }
 .productImg{ 
   width: 20vw;
+}
+/* media query */
+
+@media (max-width: 1263px ){
+  .loadResult{
+    position: relative;
+  }
+  .loadcal{
+    justify-content: center;
+  }
+
+}
+@media (max-width: 850px){
+  .aboutcont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+  }
+}
+@media(max-width: 706px){
+  .hero{
+    display: none;
+  }
+  .process{
+    margin-top: 15vh;
+  }
+  .nav{
+    display:flex;
+    flex-direction: column;
+  }
 }
