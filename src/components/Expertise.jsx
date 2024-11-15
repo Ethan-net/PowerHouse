@@ -8,7 +8,7 @@ export default function Expertise() {
     <div className='bg-[#FFD6C9] py-14'>
       <div className='w-[80%] mx-auto' >
         <h1 className='text-3xl text-red-500 font-bold mb-16 text-center' >Our Expertise</h1>
-        <div className='flex flex-wrap justify-center gap-10'>
+        <div className='gridExpert md:grid-cols-3 gap-3 lg:grid-cols-3'>
             <div className='hover:scale-110 hover:duration-700'>
                 <h2 className='font-bold'>EPC service</h2>
                 <div >

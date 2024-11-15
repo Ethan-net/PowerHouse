@@ -141,6 +141,11 @@ body{
 .productImg{ 
   width: 20vw;
 }
+.gridExpert{
+  display: grid;
+  grid-template-column: 1fr 1fr 1fr,
+  
+}
 /* media query */
 
 @media (max-width: 1263px ){
