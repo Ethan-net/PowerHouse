@@ -80,14 +80,9 @@ body{
 }
 .loadResult{
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1) ;
-  padding: 1vh 2vw;
+  padding: 0 2vw;
   border-radius: 6px;
-  width: 40vw;
-  height: 100vh;
-  /* margin-right: 2vw; */
-  position: fixed;
-  top: 10vh;
-  right: 1vw;
+  width: 35vw;
 }
 .loadCont{
   border-bottom: 0.5px solid #cdcdcd;
@@ -97,6 +92,9 @@ body{
 .BatteryCont{
   background-color: aliceblue;
   border-radius: 5px;
+  margin: 2vh 0;
+  gap: 1vw;
+  
 }
 .herotwo{
   background-color: #E9F8FD;
@@ -132,8 +130,9 @@ body{
   margin: 0 auto;
 }
 .downloadButt{
-  width:50%;
-  margin: 3vh auto;
+  width:30%;
+  margin: 0 auto;
+  justify-content:center;
 }
 .downloadSec{
   margin: 3vw;
@@ -149,13 +148,17 @@ body{
 /* media query */
 
 @media (max-width: 1263px ){
-  .loadResult{
-    position: relative;
-  }
-  .loadcal{
+  .downloadSec{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
+}
+@media (max-width: 1000px ){
+  .batteryT{
+    font-size: 10px;
+  }
 }
 @media (max-width: 850px){
   .aboutcont{
@@ -166,7 +169,7 @@ body{
 }
 @media(max-width: 706px){
   .hero{
-    display: none;
+    
   }
   .process{
     margin-top: 15vh;

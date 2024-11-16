@@ -28,6 +28,7 @@ export default function Loadcal() {
         }
 
 
+    const [loadResult, setLoadResult] = React.useState(false);
 
     const [nbulb, SetNbulb] = React.useState(0);
     const TotalNbulb = nbulb * 60;
@@ -157,7 +158,8 @@ export default function Loadcal() {
 
     <div>
       <Nav/>
-      <div className='loadcal flex flex-wrap '>
+      <div className='loadcal relative'>
+      {loadResult && <div className="overlay h-[100%] w-[100%] bg-slate-500/60 fixed top-0 bottom-0 left-0 right-0"></div>}
         <div >
             <div className='flexable '>
                 <h1 className='font-bold text-lg'>APPLIANCE</h1>
@@ -335,13 +337,13 @@ export default function Loadcal() {
                 <button onClick={()=> SetMicrowave(microwave - 1)} className='bg-black text-white rounded-lg' >-</button> 
                 <button onClick={()=> SetMicrowave(microwave + 1)} className='bg-red-500 text-white rounded-lg'>+</button>
                 </div>
-            </div>        
-            
-        </div>
 
-        <div className='loadResult'>
+            </div> 
 
-        <div className='downloadSec'  ref={sectionRef}>
+            {loadResult && <div className='loadResult absolute top-[20vh] left-[30%] bg-white'>
+
+             <div className='downloadSec'>
+                <button onClick={()=> setLoadResult(!loadResult)} className= "rounded-3xl p-2 text-white bg-red-500">X</button>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Total Load</h1>
                 <p className='text-white  bg-black h-7 w-20 my-0 mx-auto'>{TotalLoad} watt</p>
@@ -364,23 +366,30 @@ export default function Loadcal() {
             </div>
             <div className='text-center'>
                 <h1 className='text-sm font-bold mb-5'>Battery</h1>
-                <div className='flex justify-between'>
-                    <div className='BatteryCont py-5 px-2'>
-                        <h3 className='font-bold'> Required Capacity( Ah @ 24V)</h3>
-                        <p className='mt-3'>{batteryCap}</p>
+                <div className='flex justify-between gap-2'>
+                    <div className='BatteryCont p-[2vw]'>
+                        <h3 className='font-bold batteryT'> Required Capacity( Ah @ 24V)</h3>
+                        <p className='mt-3 text-bold'>{batteryCap}</p>
                     </div>
-                    <div className='BatteryCont py-5 px-2' >
-                    <h3 className='font-bold'> Quantity (200 Ah Each)</h3>
-                    <p className='text-red-500 mt-3'>{batteryQuant}</p>
+                    <div className='BatteryCont' >
+                    <h3 className='font-bold batteryT p-[2vw]'> Quantity (200 Ah Each)</h3>
+                    <p className='text-red-500 mt-3 text-bold'>{batteryQuant}</p>
                     </div>
                 </div>
             </div>
             </div>
                     <div className='downloadButt' >
-                    <button onClick={handleDownloadPdf} className=' bg-red-500 p-2 rounded-xl '>Download Load Result <img className='w-5 mx-auto ' src={downloadBut} alt="" /> </button>
+                    <button onClick={handleDownloadPdf} className=' bg-red-500 p-2 rounded-xl '>Download Result <img className='w-5 mx-auto ' src={downloadBut} alt="" /> </button>
                     </div>
+        </div>  }
+            
         </div>
 
+        
+
+      <div className="mx-auto w-[25%]">
+        <button className="p-3 text-white bg-red-500" onClick={()=> setLoadResult(!loadResult)} >Show Result</button> 
+      </div>      
       </div>
     </div>
     
