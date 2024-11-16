@@ -342,8 +342,8 @@ export default function Loadcal() {
 
             {loadResult && <div className='loadResult absolute top-[20vh] left-[30%] bg-white'>
 
-             <div className='downloadSec'>
                 <button onClick={()=> setLoadResult(!loadResult)} className= "rounded-3xl p-2 text-white bg-red-500">X</button>
+             <div className='downloadSec' ref={sectionRef}>
             <div className='loadCont'>
                 <h1 className='text-sm font-bold mb-4'>Total Load</h1>
                 <p className='text-white  bg-black h-7 w-20 my-0 mx-auto'>{TotalLoad} watt</p>
