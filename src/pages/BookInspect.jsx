@@ -61,7 +61,6 @@ export default function BookInspect() {
 
   return (
     <div>
-        <Nav/>
         <form onSubmit={handleSubmit} className='mt-32'>
       <div className="space-y-12 bookInpect">
       <div className="border-b border-gray-900/10 pb-12">

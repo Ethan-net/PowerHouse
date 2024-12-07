@@ -11,8 +11,6 @@ export default function Homepage() {
   return (
     <>
     <div>
-        
-      <Nav/>
       <Heropage/>
       <Process/>
       {/* <HeroTwo/> */}

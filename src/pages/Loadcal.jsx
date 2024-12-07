@@ -157,7 +157,6 @@ export default function Loadcal() {
   return (
 
     <div>
-      <Nav/>
       <div className='loadcal relative'>
       {loadResult && <div className="overlay h-[100%] w-[100%] bg-slate-500/60 fixed top-0 bottom-0 left-0 right-0"></div>}
         <div >
