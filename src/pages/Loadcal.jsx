@@ -511,7 +511,7 @@ export default function Loadcal() {
           </div>
 
           {loadResult && (
-            <div className="loadResult absolute top-[20vh] left-[30%] bg-white">
+            <div className="loadResult absolute top-[20vh]  bg-white left-1/2 -translate-x-1/2 w-[90vw] max-w-md p-4 rounded-lg flex flex-col py-4 justify-center shadow-lg z-20">
               <button
                 onClick={() => setLoadResult(!loadResult)}
                 className="rounded-3xl p-2 text-white bg-red-500"
@@ -578,15 +578,14 @@ export default function Loadcal() {
                   </div>
                 </div>
               </div>
-              <div className="downloadButt">
-                <button
-                  onClick={handleDownloadPdf}
-                  className=" bg-red-500 p-2 rounded-xl "
-                >
-                  Download Result{" "}
-                  <img className="w-5 mx-auto " src={downloadBut} alt="" />{" "}
-                </button>
-              </div>
+
+              <button
+                onClick={handleDownloadPdf}
+                className=" bg-red-500 p-2 rounded-xl px-7 "
+              >
+                Download Result{" "}
+                <img className="w-5 mx-auto " src={downloadBut} alt="" />{" "}
+              </button>
             </div>
           )}
         </div>
