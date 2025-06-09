@@ -1,32 +1,44 @@
-import React from 'react'
-import home from '../assets/images/home.svg'
-import pannel from '../assets/images/pannelinstall.svg'
-import call from '../assets/images/call.svg'
-import maintenance from '../assets/images/maintenance.svg'
-
+import React from "react";
+import home from "../assets/images/home.svg";
+import pannel from "../assets/images/pannelinstall.svg";
+import call from "../assets/images/call.svg";
+import maintenance from "../assets/images/maintenance.svg";
 
 export default function Moreservice() {
   return (
-    <div >
-        <section className='flex flex-wrap justify-center gap-10 my-[17vh] mx-auto w-[80%]'>
-            <div className=''>
-                <img className='mx-auto w-16' src={home} alt="" />
-                <h2>Free Home Assessment</h2>
-            </div>
-            <div>
-                <img className='mx-auto w-16' src={pannel} alt="" />
-                <h2>Hassle Free Installation</h2>
-            </div>
-            <div>
-                <img className='mx-auto w-16' src={call} alt="" />
-                <h2>Customer Support</h2>
-            </div>
-            <div>
-                <img className='mx-auto w-16' src={maintenance} alt="" />
-                <h2>2 Year Maintenance Free</h2>
-            </div>
-        </section>
-      
+    <div className="w-full py-16 bg-white">
+      <section className="flex flex-col sm:flex-row flex-wrap justify-center gap-10 w-[90%] md:w-[80%] mx-auto text-center">
+        <div className="flex flex-col items-center">
+          <img className="w-16 mb-2" src={home} alt="Free Home Assessment" />
+          <h2 className="text-sm md:text-base font-medium">
+            Free Home Assessment
+          </h2>
+        </div>
+        <div className="flex flex-col items-center">
+          <img
+            className="w-16 mb-2"
+            src={pannel}
+            alt="Hassle Free Installation"
+          />
+          <h2 className="text-sm md:text-base font-medium">
+            Hassle Free Installation
+          </h2>
+        </div>
+        <div className="flex flex-col items-center">
+          <img className="w-16 mb-2" src={call} alt="Customer Support" />
+          <h2 className="text-sm md:text-base font-medium">Customer Support</h2>
+        </div>
+        <div className="flex flex-col items-center">
+          <img
+            className="w-16 mb-2"
+            src={maintenance}
+            alt="2 Year Maintenance Free"
+          />
+          <h2 className="text-sm md:text-base font-medium">
+            2 Year Maintenance Free
+          </h2>
+        </div>
+      </section>
     </div>
-  )
+  );
 }

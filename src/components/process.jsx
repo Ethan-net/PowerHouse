@@ -1,60 +1,41 @@
-import React from 'react'
-import '../App.css'
-import step1 from '../assets/images/s1.svg'
-import step2 from '../assets/images/s2.svg'
-import step3 from '../assets/images/s3.svg'
-import step4 from '../assets/images/f4.svg'
-import step6 from '../assets/images/s5.svg'
-import step5 from '../assets/images/s4.svg'
+import React from "react";
+import "../App.css";
+import step1 from "../assets/images/s1.svg";
+import step2 from "../assets/images/s2.svg";
+import step3 from "../assets/images/s3.svg";
+import step4 from "../assets/images/f4.svg";
+import step5 from "../assets/images/s4.svg";
+import step6 from "../assets/images/s5.svg";
 
 export default function Process() {
+  const steps = [
+    { img: step1, text: "Fill the Site Survey Form", step: "Step 1" },
+    { img: step2, text: "Request For Site Inspection", step: "Step 2" },
+    { img: step3, text: "Get Quotation", step: "Step 3" },
+    { img: step4, text: "Installation", step: "Step 4" },
+    { img: step5, text: "Inspection", step: "Step 5" },
+    { img: step6, text: "Ready to Use", step: "Step 6" },
+  ];
+
   return (
-    <div className='process text-center'>
-        <h1 className='text-4xl font-medium mt-14'>Installation Process  </h1>
-        <div className='step_icon py-32'>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items imgform' src={step1} alt="" /> 
-            <div className='flex flex-col gap-5'>
-            <p>Fill the Site Survey Form</p>
-            <h1 className='font-medium text-red-500'>Step 1</h1>
-            </div>
-        </div>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items' src={step2} alt="" />
-            <div className='flex flex-col gap-5 write'>
-            <p>Request For Site Inspection</p>
-            <h1 className='font-medium text-red-500'> Step 2</h1>
-            </div>
-        </div>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items imgform' src={step3} alt="" />
-            <div className='flex flex-col gap-5'>
-            <p>Get Quotation</p>
-            <h1 className='font-medium text-red-500'>Step 3</h1>
-            </div>
-        </div>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items' src={step4} alt="" />
-            <div className='flex flex-col gap-5'>    
-            <p>Installation</p>
-            <h1 className='font-medium text-red-500 '>Step 4</h1>
-            </div>
-        </div>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items' src={step5} alt="" />
-            <div className='flex flex-col gap-5'>     
-            <p>Inspection</p>
-            <h1 className='font-medium text-red-500'>Step 5</h1>
-            </div>
-        </div>
-        <div className='flex flex-col text-center gap-5'>
-        <img className='items' src={step6} alt="" />
-            <div className='flex flex-col gap-5'>    
-            <p>Ready to Use</p>
-            <h1 className='font-medium text-red-500'>Step 6</h1>
-            </div>
-        </div>
-        </div>
+    <div className="process text-center px-6 md:px-[10%] py-14">
+      <h1 className="text-3xl md:text-4xl font-semibold mb-12">
+        Installation Process
+      </h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        {steps.map((item, index) => (
+          <div key={index} className="flex flex-col items-center gap-4">
+            <img
+              src={item.img}
+              alt={item.text}
+              className="w-24 h-24 object-contain"
+            />
+            <p className="text-sm font-medium">{item.text}</p>
+            <h1 className="font-bold text-red-500">{item.step}</h1>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
