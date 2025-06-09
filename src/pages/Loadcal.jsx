@@ -514,7 +514,7 @@ export default function Loadcal() {
             <div className="loadResult absolute top-[20vh]  bg-white left-1/2 -translate-x-1/2 w-[90vw] max-w-md p-4 rounded-lg flex flex-col py-4 justify-center shadow-lg z-20">
               <button
                 onClick={() => setLoadResult(!loadResult)}
-                className="rounded-3xl p-2 text-white bg-red-500"
+                className="rounded-3xl w-10 mt-4 p-2 text-white bg-red-500"
               >
                 X
               </button>
@@ -581,9 +581,9 @@ export default function Loadcal() {
 
               <button
                 onClick={handleDownloadPdf}
-                className=" bg-red-500 p-2 rounded-xl px-7 "
+                className=" bg-red-500 p-2 rounded-xl px-7 mb-4 "
               >
-                Download Result{" "}
+                Download
                 <img className="w-5 mx-auto " src={downloadBut} alt="" />{" "}
               </button>
             </div>
